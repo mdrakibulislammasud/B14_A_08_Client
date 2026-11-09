@@ -1,0 +1,6 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:oklch(var(--b2))}
+.btn-primary,.btn-secondary,.btn-outline,.btn-ghost,.btn-error{@apply normal-case font-semibold}
+.field{@apply input input-bordered flex items-center gap-2 w-full bg-base-100}
+.field input{@apply grow min-w-0 bg-transparent outline-none}
+.surface{@apply bg-base-100 border border-base-300 rounded-2xl shadow-sm}
