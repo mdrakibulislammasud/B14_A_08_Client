@@ -39,7 +39,10 @@ export default function AuthForm({ mode }) {
     } catch { toast.error("Something went wrong. Please try again."); }
     finally { setBusy(false); }
   };
-  const google = () => authClient.signIn.social({ provider: "google", callbackURL: "/" });
+  const google = () => authClient.signIn.social({
+  provider: "google",
+  callbackURL: window.location.origin
+});
   const Err = ({ k }) => errors[k] ? <span role="alert" className="text-error text-xs mt-1">{errors[k]}</span> : null;
   const Lb = ({ children }) => <span className="text-sm font-semibold mb-1.5">{children}</span>;
   return (<div className="px-4 py-12"><div className="surface max-w-md mx-auto p-6 md:p-8 shadow-md">
